@@ -1,6 +1,12 @@
 # QUNET
 
-Single-engine solution for U-Net neural network decoder for Quantum Error Correction (QEC), implemented with quantization-aware training (using Brevitas) and deployed on FPGA using Vitis HLS and the FINN framework. The model supports an early-exit mechanism to reduce average inference latency.
+This repository contains the project files for the paper:
+
+> **FPGA-Accelerated Early-Exit Neural Decoder for Quantum Error Correction**
+> Ran Huo, Jose Nunez-Yanez
+> [https://ieeexplore.ieee.org/abstract/document/11272758](https://ieeexplore.ieee.org/abstract/document/11272758)
+
+Quantum error correction (QEC) is indispensable for fault-tolerant quantum computing, yet implementing powerful decoders in hardware remains a bottleneck. QUNET is a quantized modular U-Net decoder for surface codes that incorporates quantization-aware training (QAT) to compress weights and activations to as low as 4 bits, and introduces an early-exit mechanism that dynamically routes simple syndromes through a shallower subnetwork, saving on average 34% of decoding time. The design achieves competitive logical accuracy compared to MWPM while consuming up to 50% fewer FPGA resources than dataflow implementations.
 
 ## Repository Structure
 
